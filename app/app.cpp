@@ -65,6 +65,7 @@ namespace vsite::oop::v9
 
 	uint32_t word_frequency::frequency(const std::string& str) const
 	{
-		return m_map.find(str) != m_map.end() ? m_map.at(str) : 0;
+		auto it = m_map.find(str);
+		return it != m_map.end() ? it->second : 0;
 	}
 }
